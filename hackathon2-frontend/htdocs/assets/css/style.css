@@ -1,0 +1,100 @@
+.bg-page {
+    background: #edf1f5;
+}
+
+/* CSS LOGIN E CADASTRO */
+
+.login #user-login,
+.login #user-password,
+.login #user-name {
+    position: absolute;
+    height: 48px; 
+}
+
+.register #user-login,
+.register #user-password,
+.register #user-name {
+    position: absolute;
+    height: 48px; 
+}
+
+.login .form-control-lg,
+.register .form-control-lg {
+    padding-left: 50px;
+}
+
+.msg-success {
+    background-color: #1a9d03;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+    display: none;
+}
+
+.msg-error {
+    background-color: #be0009;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+    display: none;
+}
+
+/* FIM */
+
+/* CSS DASHBOARD */
+
+.dashboard-top {
+    background-color: #2f323e;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dashboard-content {
+    display: flex;
+}
+
+.dashboard-leftside {
+    background-color: #fff;
+    width: 10%;
+    padding-top: 20px;
+    box-shadow: 1px 0px 20px rgb(0 0 0 / 8%)
+}
+
+.dashboard-leftside p {
+    font-size: 18px;
+    padding-left: 15px;
+    color: #54667a;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.dashboard-leftside p:hover {
+    background-color: #e4e4e4;
+}
+
+.dashboard-leftside svg {
+    position: relative;
+    top: -3px;
+}
+
+.dashboard-rightside {
+    width: 90%;
+}
+
+.dashboard-rightside p {
+    font-size: 24px;
+}
+
+.dashboard-content-rside {
+    background-color: #edf1f5;
+    padding: 20px 2%;
+}
+
+.dashboard-top-rside p {
+    margin-bottom: 0;
+    padding: 12px;
+}
+
+/* FIM */

@@ -69,40 +69,26 @@
                 $email = document.querySelector('#typeEmail').value;
                 $password = document.querySelector('#typePassword').value;
 
-                let myHeaders = new Headers();
-                myHeaders.append('Conte-Type', 'application/json');
-                myHeaders.append('Accept', 'application/json');
-
-                myBody = {
-                    name: $name,
-                    email: $email,
-                    password: $password
-                };
-    
-                const myInit = {
-                method: 'POST',
-                headers: myHeaders,
-                body: JSON.stringify({
-                    name: $name,
-                    email: $email,
-                    password: $password
-                })
-                };
-    
-                const response = await fetch('http://hackathon2-backend.loc/api/register', {
+                fetch('http://hackathon2-backend.loc/api/register', {
                     method: 'POST',
-                    headers: myHeaders,
+                    headers: {
+                        'Content-type': 'application/json; charset=UTF-8'
+                    },
                     body: JSON.stringify({
                         name: $name,
                         email: $email,
                         password: $password
                     })
+                }).then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    return Promise.reject(response);
+                }).then(function (data) {
+                    console.log(data);
+                }).catch(function (error) {
+                    console.warn('Algo deu errado.', error);
                 });
-
-                const content = await rawResponse.json();
-
-                console.log(content);
-
             }
 
         </script>
